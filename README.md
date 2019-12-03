@@ -1,2 +1,3 @@
 # TestDjango
-Estudos sobre o django
+	- Estudos sobre o django
+	- Nvim
