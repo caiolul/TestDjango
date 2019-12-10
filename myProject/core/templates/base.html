@@ -1,42 +1,18 @@
-	
-<!-- Estendemos do template base -->
-<!--{% extends "website/_layouts/base.html" %}
+{% load static %}
+<html lang='pt'>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <title>Django develop</title>
+    </head>
+    <body>
+        {% block content %}
+    
+        {% endblock %}
+    </body>
+</html>
+       
 
-<!-- Bloco que define o <title></title> da nossa página -->
-{% block title %}Página Inicial{% endblock %}
-
-<!-- Bloco de conteúdo da nossa página -->    
-{% block conteudo %}
-<div class="container">
-  <div class="row">
-    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Cadastrar Funcionário</h5>
-          <p class="card-text">
-            Cadastre aqui um novo <code>Funcionário</code>.
-          </p>
-          <a href="{% url 'website:cadastra_funcionario' %}"
-             class="btn btn-primary">
-            Novo Funcionário
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Lista de Funcionários</h5>
-          <p class="card-text">
-            Veja aqui a lista de <code>Funcionários</code> cadastrados.
-          </p>
-          <a href="{% url 'website:lista_funcionarios' %}"
-             class="btn btn-primary">
-            Vá para Lista
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-{% endblock %}

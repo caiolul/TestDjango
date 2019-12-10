@@ -1,0 +1,15 @@
+h1 a, h2 a{
+    color: green;
+}
+body{
+    width: 95%;
+    background: black;
+    margin: auto;
+}
+p {
+    color: green;
+}
+div{
+    width: 95%;
+    margin: auto;
+}
