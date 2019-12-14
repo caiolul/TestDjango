@@ -9,7 +9,7 @@ body{
 p {
     color: green;
 }
-div{
-    width: 95%;
+navbar-brand{
+    font-size: 28;
     margin: auto;
 }
