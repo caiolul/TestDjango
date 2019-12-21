@@ -6,4 +6,4 @@
   - Obs é preciso instalar o python-psycopg para evitar erros no pip
 # Ferramentas usadas
   - Docker
-	- [Nvim] (https://github.com/caiolul/nvim.git)
+	- [ Nvim ] (https://github.com/caiolul/nvim.git)
