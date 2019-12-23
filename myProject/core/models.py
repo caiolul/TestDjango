@@ -16,5 +16,5 @@ class Post (models.Model):
         return self.title
 
     def pub(self):
-        return self.pub_date >= timezone.now()
+        self.pub_date = timezone.now()
         self.save()

@@ -1,37 +1,30 @@
-{% extends 'base.html' %}
+{% load static %}
+<html lang='pt'>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <title>Django develop</title>
+    </head>
+    <body>
+
+        <div>
+            <h1><a href="/">Exemplos de links</a></h1>
+        </div>
+
+        <div>
+            {% for posts in posts %}
+            <div>
+                <p>publicado: {{ posts.pub_date }}</p>
+                <h2><a href="">{{ posts.title }}</a></h2>
+                <p>{{ posts.text|linebreaksbr }}</p>
+            </div>
+            {% endfor %}
+          
+    </body>
+</html>
 
 
-{% block content %}
 
-<header>
-    <!-- Fixed navbar -->
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="#">Develop Django</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    </nav>
-</header>
-<div>
-    <h1><a href="/">Exemplos de links</a></h1>
-</div>
-
-<div>
-    {% for post in posts %}
-    <div>
-        <p>published: {{ post.pub_date }}</p>
-        <h2><a href="">{{ post.title }}</a></h2>
-        <p>{{ post.text|linebreaksbr }}</p>
-    </div>
-    {% endfor %}
-    <h2><a href="">Teste post</a></h2>
-    <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-</div>
-
-<div>
-    <p>publicado: 08.12.2019, 12:14</p>
-    <h2><a href="">Teste post 2</a></h2>
-    <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
-</div>
-
-{% endblock %}
