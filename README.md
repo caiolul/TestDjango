@@ -5,6 +5,8 @@
   - [x] Requirements Files
   - [x] Integração com PostgreSQL
   - [x] PostgreSQL e PgAdmin no Docker
+  - [x] Integrando model no html
+  - [ ] Criando post
   - [ ] Deploy
   - [ ] Designer
   - [ ] Models avançados
