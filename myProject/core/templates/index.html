@@ -17,8 +17,14 @@
 </div>
 
 <div>
-    <p>publicado: 08.12.2019, 12:14</p>
-    <h2><a href="">Teste post</a></h2>
+    {% for post in posts %}
+    <div>
+        <p>published: {{ post.pub_date }}</p>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}  
+<h2><a href="">Teste post</a></h2>
     <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
 </div>
 
