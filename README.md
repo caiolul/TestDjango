@@ -1,15 +1,23 @@
-# TestDjango
+# Estudos sobre o django
 
-  - Estudos sobre o django
-  - Requirements Files Created
-  - Integração com PostgreSQL
-  - PostgreSQL e PgAdmin no Docker
-  - Obs é preciso instalar o python-psycopg para evitar erros no pip
+## Tasklist
+
+  - [x] Requirements Files
+  - [x] Integração com PostgreSQL
+  - [x] PostgreSQL e PgAdmin no Docker
+  - [x] Integrando model no html
+  - [ ] Criando post
+  - [ ] Deploy
+  - [ ] Designer
+  - [ ] Models avançados
+  
+  __Obs:__ 
+    é preciso instalar o python-psycopg para evitar erros no pip
   ```bash
 pacman -S python-psycopg2
 ```
 
-# Ferramentas usadas
-
+## Ferramentas usadas
+  
   - Docker
   - [Nvim](https://github.com/caiolul/nvim.git)
