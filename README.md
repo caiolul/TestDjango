@@ -10,6 +10,8 @@
   - [ ] Deploy
   - [ ] Designer
   - [ ] Models avançados
+  - [ ] Cadastramento usuarios
+  - [ ] Posts feitos por usuarios
   
   __Obs:__ 
     é preciso instalar o python-psycopg para evitar erros no pip

@@ -12,16 +12,23 @@
     </head>
     <body>
         <div class="pg-header">
-            <h1><a href="/">Django blog</a></h1>
+            <h1><a href="/">>Django blog</a></h1>
         </div>
-            {% for posts in posts %}
-            <div class="posts">
-                <h2><a href="">{{ posts.title }}</a></h2>
-                <p>{{ posts.text|linebreaksbr }}</p>
-                <p>publicado: {{ posts.pub_date }}</p>
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                    {% for posts in posts %}
+                    <div class="posts">
+                        <h2><a href="">{{ posts.title }}</a></h2>
+                        <p>{{ posts.text|linebreaksbr }}</p>
+                        <div class="date">
+                            <p>publicado: {{ posts.pub_date }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
             </div>
-            {% endfor %}
-          
+        </div>
     </body>
 </html>
 
