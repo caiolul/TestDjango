@@ -22,4 +22,5 @@ pacman -S python-psycopg2
 ## Ferramentas usadas
   
   - Docker
+  - Sublime Text 3 Dev
   - [Nvim](https://github.com/caiolul/nvim.git)
