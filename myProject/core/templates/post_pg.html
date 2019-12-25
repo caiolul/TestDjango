@@ -1,13 +1,12 @@
 {% extends 'base.html' %}
-
     {% block content %}                
-        {% for posts in posts %}
+        {% if posts.pub_date %}
             <div class="posts">
-                <h2><a href="{% url 'post_pg' pk=posts.pk %}">{{ posts.title }}</a></h2>
+                <h2>{{ posts.title }}</h2>
                 <p>{{ posts.text|linebreaksbr }}</p>
-                <div class="date">
+                <div class="date_post_list">
                     <p>Publicado: {{ posts.pub_date }}</p>
                 </div>
             </div>
-        {% endfor %}
+        {% endif %}
     {% endblock %}

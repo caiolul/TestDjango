@@ -1,8 +1,4 @@
-h1 a, h2 a{
-    color: #008000;
-	font-family: 'Hack';
 
-}
 body{
     background: black;
     margin: auto;
@@ -27,8 +23,9 @@ p {
     margin-left: 40px;
 }
 
-h1, h2, h3, h4 {
+h1, h2 a, h2, h3, h4 {
     font-family: 'Hack';
+    color: #008000;
 }
 .date {
     color: #828282;
@@ -43,7 +40,7 @@ h1, h2, h3, h4 {
 }
 
 .top-menu, .top-menu:hover, .top-menu:visited {
-    color: #ffffff;
+    color: #808000;
     float: right;
     font-size: 26pt;
     margin-right: 20px;
@@ -54,5 +51,10 @@ h1, h2, h3, h4 {
 }
 
 .post h2 a, .post h2 a:visited {
-    color: #000000;
+    color: #808000;
+}
+.date_post_list{
+	color: #828282;
+	position: relative;
+	margin-right: 40px;
 }
