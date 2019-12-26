@@ -2,6 +2,7 @@
     {% block content %}                
         {% if posts.pub_date %}
             <div class="posts">
+                <a class="btn btn-default" href="{% url 'post_edit' pk=posts.pk %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
                 <h2>{{ posts.title }}</h2>
                 <p>{{ posts.text|linebreaksbr }}</p>
                 <div class="date_post_list">

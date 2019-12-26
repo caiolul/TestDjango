@@ -6,7 +6,7 @@
   - [x] Integração com PostgreSQL
   - [x] PostgreSQL e PgAdmin no Docker
   - [x] Integrando model no html
-  - [ ] Criando post
+  - [x] Criando post
   - [ ] Deploy
   - [ ] Designer
   - [ ] Models avançados
