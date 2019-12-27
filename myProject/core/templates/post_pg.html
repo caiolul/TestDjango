@@ -7,7 +7,9 @@
                 <div class="date_post_list">
                     <p>Publicado: {{ posts.pub_date }}</p>
                 </div>
-                <a class="btn btn-default" href="{% url 'post_edit' pk=posts.pk %}" class="top-menu"><span class="glyphicon glyphicon-pencil"></span></a>
+                {% if user.is_authenticated %} 
+                    <a class="btn btn-default" href="{% url 'post_edit' pk=posts.pk %}" class="top-menu"><span class="glyphicon glyphicon-pencil"></span></a> 
+                {% endif %}
             </div>
         {% endif %}
     {% endblock %}
