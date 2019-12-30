@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from myProject.core.models import Post
+from myProject.core.models import Post, Login
 from django.utils import timezone
-from .forms import PostForm
+from .forms import PostForm #, LoginForm
 
 # Create your views here.
 
@@ -48,3 +48,16 @@ def post_edit(request, pk):
 		form = PostForm(instance=post)
 	return render(request, 'post_new_edit.html', {'form': form})
 
+
+def login_user(request, pk):
+	#login = get_object_or_404(Login, pk=pk)
+	if request.method == "POST":
+		form = LoginForm(resquest.Login, instance=login)
+		if form.is_valid():
+			login = form.save(commit=False)
+			login.save()
+			return redirect('index', pk=login.pk)
+	else:
+		form = LoginForm(instance=login)
+
+	return render(request, 'index.html', {'form': form})
