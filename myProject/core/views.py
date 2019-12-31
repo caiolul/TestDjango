@@ -1,13 +1,10 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from myProject.core.models import Post, Login
+from myProject.core.models import Post
 from django.utils import timezone
-from .forms import PostForm, LoginForm
-from django.contrib.auth.forms import UserCreationForm
+from .forms import PostForm
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 
-# Create your views here.
-
-'''Post.objects.get(pk=pk)'''
-
+#Tela inicial
 
 def index(request):
     posts = Post.objects.filter(
@@ -19,6 +16,7 @@ def post_pg(request, pk):
     posts = get_object_or_404(Post, pk=pk)
     return render(request, 'post_pg.html', {'posts': posts})
 
+#Area de crianção e edição de posts
 
 def post_new(request):
     if request.method == "POST":
@@ -32,7 +30,6 @@ def post_new(request):
     else:
         form = PostForm()
     return render(request, 'post_new_edit.html', {'form': form})
-
 
 
 def post_edit(request, pk):
@@ -49,22 +46,9 @@ def post_edit(request, pk):
 		form = PostForm(instance=post)
 	return render(request, 'post_new_edit.html', {'form': form})
 
+#Registro e login de users
 
-"""def login_user(request):
-	#login = get_object_or_404(Login, pk=pk)
-	if request.method == "POST":
-		form = LoginForm(request.POST)
-		if form.is_valid():
-			form.save()
-			#login.save()
-			return redirect('login_user', pk=login.pk)
-	else:
-		form = LoginForm()
-
-	return render(request, 'login_pg.html', {'form': form})
-"""
-
-def login_form(request):
+def register_form(request):
     if request.method == "POST":
         form = UserCreationForm(request.POST)
         if form.is_valid():
@@ -72,4 +56,15 @@ def login_form(request):
             return redirect('index')
     else:
         form = UserCreationForm()
+    return render(request, 'register_pg.html', {'form':form})
+
+
+def login_form(request):
+    if request.method == "POST":
+        form = AuthenticationForm(data=request.POST)
+        if form.is_valid():
+            return redirect('index')
+    else:
+        form = AuthenticationForm()
+
     return render(request, 'login_pg.html', {'form':form})

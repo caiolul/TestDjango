@@ -1,0 +1,3 @@
+criar view com as opçoes de cadastro e login
+fazer views separadas para cadastro e login
+melhorar designer das pages
