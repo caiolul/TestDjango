@@ -1,6 +1,6 @@
-{% extends 'base.html' %}
+{% extends 'base_top.html' %}
 
-    {% block content %}                
+    {% block content %}
         {% for posts in posts %}
             <div class="posts">
                 <h2><a href="{% url 'post_pg' pk=posts.pk %}">{{ posts.title }}</a></h2>
