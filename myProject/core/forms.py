@@ -1,6 +1,6 @@
 from django import forms
 
-from .models import Post, Login
+from .models import Post
 
 class PostForm(forms.ModelForm):
 
@@ -9,7 +9,7 @@ class PostForm(forms.ModelForm):
         fields = ( 'title', 'description', 'text')
 
 
-class LoginForm(forms.Form):
+"""class LoginForm(forms.Form):
 	email = forms.CharField(widget=forms.EmailInput)
 	passwd = forms.CharField(widget=forms.PasswordInput)
 	#passwd = forms.ChaField(widget=forms.TextInput)
@@ -19,4 +19,4 @@ class LoginForm(forms.Form):
 		fieds = ('email', 'passwd')
 
 	def login_save(self):
-		self.sabe()
+		self.sabe()"""
