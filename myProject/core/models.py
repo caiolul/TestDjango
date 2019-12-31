@@ -22,6 +22,6 @@ class Post (models.Model):
 
 class Login (models.Model):
     email = models.EmailField(max_length=260)
-    #passwd = models.CharField(max_length=50)
-    passwd = models.TextField()
+    passwd = models.CharField(max_length=50)
+    #passwd = models.TextField()
 

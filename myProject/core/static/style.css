@@ -58,3 +58,7 @@ h1, h2 a, h2, h3, h4 {
 	position: relative;
 	margin-right: 40px;
 }
+
+.login input, .login textarea{
+    width: 100%;
+}
