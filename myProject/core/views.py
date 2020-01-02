@@ -76,4 +76,8 @@ def logout_form(request):
     if request.method == "POST":
         logout(request)
         return redirect('index')
-    
+
+# Search bar
+
+def search(request):
+    pass
