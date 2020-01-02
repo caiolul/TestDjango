@@ -3,7 +3,7 @@ from myProject.core.models import Post
 from django.utils import timezone
 from .forms import PostForm
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-from django.contrib.auth import login
+from django.contrib.auth import login, logout
 #Tela inicial
 
 def index(request):
@@ -71,3 +71,9 @@ def login_form(request):
         form = AuthenticationForm()
 
     return render(request, 'login/login_pg.html', {'form':form})
+
+def logout_form(request):
+    if request.method == "POST":
+        logout(request)
+        return redirect('index')
+    

@@ -62,3 +62,14 @@ h1, h2 a, h2, h3, h4 {
 .login input, .login textarea{
     width: 100%;
 }
+
+.logout-btn{
+  color: #008000;
+  font-family: 'Hack' cursive;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+}
