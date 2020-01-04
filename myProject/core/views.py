@@ -4,6 +4,7 @@ from django.utils import timezone
 from .forms import PostForm
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login, logout
+from django.views.generic import ListView
 #Tela inicial
 
 def index(request):
@@ -79,5 +80,17 @@ def logout_form(request):
 
 # Search bar
 
-def search(request):
-    pass
+class search_view(ListView):
+    model = Post
+    template_name = 'search.html'
+    context_object_name = 'all_search_results'
+
+    def get_queryset(self):
+       result = super(search_view, self).get_queryset()
+       query = self.request.GET.get('search')
+       if query:
+          postresult = Post.objects.filter(title__contains=query)
+          result = postresult
+       else:
+           result = None
+       return result

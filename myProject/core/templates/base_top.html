@@ -12,6 +12,10 @@
     <body>
         <div class="pg-header">
             <h1><a href="/">>Django blog</a></h1>
+            <form class="menu-top" method="GET" action="" >
+            <input class="menu-top" type="search" name="search">
+            <button class="menu-top" type="submit"> Search </button>
+            </form>
             <form class="top-menu" action="{% url 'logout_form' %}" method="post">
               {% csrf_token %}
                 <button type="submit" class="logout-btn"><span class="glyphicon glyphicon-log-out"></span>Sair</button>
