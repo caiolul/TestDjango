@@ -12,9 +12,9 @@
     <body>
         <div class="pg-header">
             <h1><a href="/">>Django blog</a></h1>
-            <form class="menu-top" method="GET" action="" >
-            <input class="menu-top" type="search" name="search">
-            <button class="menu-top" type="submit"> Search </button>
+            <form class="search-top" method="GET" action="{% url 'index' %}">
+              <input class="search-top" type="search" name="search" placeholder="Search" value="{{ request.GET.q }}">
+              <button class="logout-btn" type="submit"><span class="glyphicon glyphicon-search"></span></button>
             </form>
             <form class="top-menu" action="{% url 'logout_form' %}" method="post">
               {% csrf_token %}

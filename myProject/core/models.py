@@ -19,10 +19,3 @@ class Post (models.Model):
     def pub(self):
         self.pub_date = timezone.now()
         self.save()
-"""
-class Login (models.Model):
-    email = models.EmailField(max_length=260)
-    passwd = models.CharField(max_length=50)
-    #passwd = models.TextField()
-
-"""

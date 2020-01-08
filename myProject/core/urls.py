@@ -9,5 +9,4 @@ urlpatterns = [
     path('register/', v.register_form, name='register_form'),
     path('login/', v.login_form, name='login_form'),
     path('logout/', v.logout_form, name='logout_form'),
-    path('search/', v.search_view, name='search_view'),
 ]

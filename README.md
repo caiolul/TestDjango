@@ -9,9 +9,7 @@
   - [x] Criando post
   - [x] Cadastramento usuarios
   - [x] Posts feitos por usuarios
-  - [ ] Deploy
   - [ ] Designer
-  - [ ] Models avançados
 
 
   __Obs:__

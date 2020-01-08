@@ -42,8 +42,8 @@ h1, h2 a, h2, h3, h4 {
 .top-menu, .top-menu:hover, .top-menu:visited {
     color: #008000;
     float: right;
-    font-size: 26pt;
-    margin-right: 20px;
+    font-size: 20pt;
+    margin-right: 25px;
 }
 
 .post {
@@ -72,4 +72,26 @@ h1, h2 a, h2, h3, h4 {
   cursor:pointer;
   overflow: hidden;
   outline:none;
+}
+.search-top{
+  float: inherit;
+  margin: auto;
+  margin-left: 30%;
+}
+input[type=search]{
+  border: None;
+  background-color: #1C1C1C;
+  border-bottom: 2px solid green;
+  color: green;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+input[type=search]:focus{
+  width: 30%;
+}
+
+input[type=search], input[type=search]:focus{
+  padding: 12px, 20px;
+  font-size: 12pt;
+  font-family: 'Hack';
 }
