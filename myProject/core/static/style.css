@@ -1,6 +1,5 @@
-
 body{
-    background: black;
+    background: #242325;
     margin: auto;
 }
 p {
@@ -9,7 +8,7 @@ p {
 
 }
 .pg-header{
-	background-color: #1C1C1C;
+	background-color: #16302b;
 	margin-top: 0;
 	padding: 10px;
 }
@@ -18,9 +17,13 @@ p {
     color: #008000;
     font-size: 36pt;
     text-decoration: none;
+    outline: none;
+    margin: auto;
 }
 .content {
     margin-left: 40px;
+    outline: none;
+    text-decoration: none;
 }
 
 h1, h2 a, h2, h3, h4 {
@@ -37,6 +40,12 @@ h1, h2 a, h2, h3, h4 {
 
 .post-form textarea, .post-form input {
     width: 100%;
+    border: None;
+    padding: 20px;
+    background-color: #242325;
+    border-bottom: 2px solid green;
+    resize: vertical;
+    overflow: auto;
 }
 
 .top-menu, .top-menu:hover, .top-menu:visited {
@@ -44,15 +53,24 @@ h1, h2 a, h2, h3, h4 {
     float: right;
     font-size: 20pt;
     margin-right: 25px;
+    outline: none;
+    -webkit-appearance: inherit;// removing border in buttons
 }
 
-.post {
-    margin-bottom: 70px;
+.posts {
+	margin-bottom: 40px;
+    text-decoration: none;
+    outline: none;
+    
 }
 
-.post h2 a, .post h2 a:visited {
-    color: #808000;
+.posts h2 a, .posts h2 a:visited {
+    color: #8b9474;
+    text-decoration: none;
+    outline: none;
+    display: inline-block;
 }
+
 .date_post_list{
 	color: #828282;
 	position: relative;
@@ -67,11 +85,12 @@ h1, h2 a, h2, h3, h4 {
   color: #008000;
   font-family: 'Hack' cursive;
   background-color: Transparent;
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   border: none;
-  cursor:pointer;
+  cursor: pointer;
   overflow: hidden;
-  outline:none;
+  outline: none;
+  -webkit-appearance: inherit;// removing border in buttons
 }
 .search-top{
   float: inherit;
@@ -80,7 +99,7 @@ h1, h2 a, h2, h3, h4 {
 }
 input[type=search]{
   border: None;
-  background-color: #1C1C1C;
+  background-color: #16302b;
   border-bottom: 2px solid green;
   color: green;
   -webkit-transition: width 0.4s ease-in-out;
@@ -94,4 +113,18 @@ input[type=search], input[type=search]:focus{
   padding: 12px, 20px;
   font-size: 12pt;
   font-family: 'Hack';
+}
+.send_post{
+  color: #008000;
+  font-family: 'Hack' cursive;
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  float: right;
+  font-size: 20pt;
+  margin-right: 25px;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  -webkit-appearance: inherit;// removing border in buttons	
 }
