@@ -1,8 +1,17 @@
 {% extends 'base_top.html' %}
 	{% block content %}
 	    <h2>New post</h2>
-	    <form method="POST" class="post-form">{% csrf_token %}
-	        {{ form.as_p }}
-	        <button type="submit" class="send_post"><span class="glyphicon glyphicon-send"></span></button>
+	    <form method="POST" class="post-form">
+				{% csrf_token %}
+				<div class="form-group">
+					{{ form.title }}
+				</div>
+				<div class="form-group">
+					{{ form.description }}
+				</div>
+				<div class="form-group">
+					{{ form.text }}
+				</div>
+	        <button type="submit" class="send_post"><i class="far fa-paper-plane"></i> Enviar</button>
 	    </form>
 	{% endblock %}

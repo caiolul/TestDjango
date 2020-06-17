@@ -8,5 +8,5 @@ urlpatterns = [
     path('post/<int:pk>/edit', v.post_edit, name='post_edit'),
     path('register/', v.register_form, name='register_form'),
     path('login/', v.login_form, name='login_form'),
-    path('logout/', v.logout_form, name='logout_form'),
+    path('logout/', v.LogoutRedirectViews.as_view(), name='logout_form'),
 ]

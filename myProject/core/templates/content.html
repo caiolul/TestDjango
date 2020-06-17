@@ -3,7 +3,7 @@
     {% block content %}
         {% for posts in posts %}
         	<div class="row">
-        		<div class="col-md-8">
+        		<div class="col-sm-8 mt-5">
 		            <div class="posts">
 		                <h2><a href="{% url 'post_pg' pk=posts.pk %}">{{ posts.title }}</a></h2>
 		                <p>{{ posts.description|linebreaksbr }}</p>
