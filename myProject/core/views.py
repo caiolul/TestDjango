@@ -5,6 +5,9 @@ from .forms import PostForm
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login, logout
 from django.views.generic import *
+#Imports to api
+from rest_framework import generics
+from .serializers import PostSerial
 
 #Tela inicial
 
@@ -85,3 +88,10 @@ class LogoutRedirectViews(RedirectView):
     def get(self, request, *args, **kwargs):
         logout(request)
         return super().get(request, *args, **kwargs)
+
+# Api testing post
+
+class PostApi(generics.ListCreateAPIView):
+    queryset = Post.objects.all()
+    serializer_class = PostSerial
+
